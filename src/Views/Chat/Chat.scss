@@ -1,0 +1,34 @@
+@import '../../sass/media-queires/media';
+@import '../../sass/variables/mixins';
+@import '../../sass/variables/colors';
+@import '../../sass/media-queires/media';
+
+.chat {
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;
+  position: relative;
+  margin-bottom: 0.3rem;
+  @include respond(phone-first) {
+    @include flex-Vcenter-Hcenter;
+  }
+  background: $background-chat;
+  border-radius: 1rem;
+  width: 100%;
+  height: 74vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  &__accordion {
+    width: 100%;
+    padding: 8px;
+    padding-bottom: 0;
+    margin-bottom: auto;
+  }
+  &__main {
+    width: 100%;
+    padding: 8px;
+    padding-top: 0;
+    position: relative;
+  }
+}

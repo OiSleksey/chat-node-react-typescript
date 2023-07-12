@@ -1,0 +1,25 @@
+@import '../../sass/variables/colors';
+.msg-post {
+  &__content {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 1rem;
+    border-radius: 2.5rem;
+    background-color: $background-post-message;
+    color: $color-post-message;
+    padding: 0.8rem 2rem;
+    position: relative;
+    font-size: 1.5rem;
+  }
+  &__time {
+    position: absolute;
+    right: 0;
+    bottom: -1.5rem;
+    color: $color-post-message-time;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 10rem;
+    justify-content: end;
+  }
+}

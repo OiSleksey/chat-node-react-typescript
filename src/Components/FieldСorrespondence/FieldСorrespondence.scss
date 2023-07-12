@@ -1,0 +1,47 @@
+@import '../../sass/variables/colors';
+.field-coresspodence {
+  border-radius: 1.5rem;
+  background-color: $background-field-correspodence;
+  margin: 0 0 6px 0;
+  &__body {
+    overflow-y: auto;
+    max-height: 30rem;
+    margin-right: 0.7rem;
+    padding: 1rem;
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: $box-shadow-field-correspodence-scrollbar-track;
+      border-radius: 1rem;
+      background-color: $background-field-correspodence-scrollbar-track;
+      margin: 2rem 0;
+    }
+    &::-webkit-scrollbar {
+      width: 1rem;
+      background-color: $background-field-correspodence-scrollbar;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      outline: $outline-field-correspodence-scrollbar-thumb;
+      border-radius: 1rem;
+      -webkit-box-shadow: $box-shadow-field-correspodence-scrollbar-thumb;
+      background-color: $background-field-correspodence-scrollbar-thumb;
+    }
+  }
+}
+
+.user__img-cont {
+  height: 4rem;
+  width: 4rem;
+}
+
+.user__img {
+  height: 4rem;
+  width: 4rem;
+  border: 1px solid $border-field-correspodence-img;
+  background-color: $background-field-correspodence-img;
+}
+
+// @media (max-width: 576px) {
+//   .contacts_card {
+//     margin-bottom: 15px !important;
+//   }
+// }

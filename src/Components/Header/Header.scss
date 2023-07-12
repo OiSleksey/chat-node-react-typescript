@@ -1,0 +1,14 @@
+@import '../../sass/variables/colors';
+
+header {
+  width: 100%;
+}
+.header-cont {
+  width: 100%;
+  padding: 1rem 2rem;
+  text-align: center;
+  background: $background-header;
+  color: $color-header;
+  border-radius: 1rem;
+  margin-bottom: 0.3rem;
+}

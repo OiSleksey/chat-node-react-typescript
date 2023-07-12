@@ -1,0 +1,32 @@
+@import '../../sass/variables/colors';
+
+.sample-qiestion {
+  &__list {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+  }
+  &__item {
+    border: 1px solid black;
+    padding: 0.2rem 0.5rem;
+    background-color: $background-sample-quest-item;
+    color: $color-sample-quest-item;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.4s;
+    &:hover {
+      background-color: $background-sample-quest-item-active;
+      color: $color-sample-quest-item-active;
+      transform: scaleX(0.99);
+    }
+    &:active {
+      transform: translateY(3px) scaleX(0.99);
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}

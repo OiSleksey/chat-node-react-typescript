@@ -1,0 +1,24 @@
+@import '../../sass/variables/colors';
+
+footer {
+  width: 100%;
+}
+.footer-cont {
+  width: 100%;
+  padding: 1rem 2rem;
+  text-align: center;
+  background: $background-footer;
+  color: $color-footer;
+  border-radius: 1rem;
+  &__link,
+  &__link:visited {
+    display: inline-block;
+    font-weight: 900;
+    color: $color-footer-link;
+    transition: all 0.2s;
+  }
+  &__link:hover {
+    color: $color-footer-link-hover;
+    transform: translateX(4px) scale(1.1);
+  }
+}
