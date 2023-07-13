@@ -1,15 +1,35 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { connect } from 'react-redux';
+// import { connect, useDispatch } from 'react-redux';
 import './FieldInput.scss';
-import { openAiDispatch } from '../../redux/middleware/postChatThunk';
-import { inputHeight } from '../../redux/actions/heightComponents.actions';
+// import { openAiDispatch } from '../../redux/middleware/postChatThunk';
+// import { inputHeight } from '../../redux/actions/heightComponents.actions';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+// import { heightComponentsSlice } from '../../redux/slices/heightComponentsSlice';
+import { useAppDispatch } from '../../hooks/redux';
+import { inputHeight } from '../../redux/slices/heightComponentsSlice';
+import { openAiDispatch } from '../../redux/actions/chatActions';
+import { useAppSelector } from '../../hooks/redux';
 
-const FieldInput = ({ postMessage, canEnterMessage, getInputHeight }) => {
+const FieldInput = (
+  {
+    // postMessage,
+    // canEnterMessage,
+    // setInputHeight,
+    // inputHeight,
+  }
+) => {
+  // const state = useSelector(state => state.chatWithAi.dateQuestions);
+  // const postMessage = useSelector(state => state.chatWithAi.dateQuestions);
+  const canEnterMessage = useAppSelector(
+    state => state.chatWithAi.canEnterMessage
+  );
   const myRef = useRef();
-
+  const dispatch = useAppDispatch();
   const changeHeight = () => {
     const clientHeight = myRef.current.clientHeight;
-    getInputHeight(clientHeight);
+    dispatch(inputHeight(clientHeight));
+    // setInputHeight(clientHeight);
   };
 
   useEffect(() => {
@@ -34,7 +54,7 @@ const FieldInput = ({ postMessage, canEnterMessage, getInputHeight }) => {
     const trimMessage = message.trim();
     if (trimMessage === '' || !canEnterMessage) return;
     minTextereaHeight(e);
-    postMessage(trimMessage);
+    dispatch(openAiDispatch(trimMessage));
     setMessage('');
   };
 
@@ -79,17 +99,17 @@ const FieldInput = ({ postMessage, canEnterMessage, getInputHeight }) => {
   );
 };
 
-const mapState = state => {
-  return {
-    canEnterMessage: state.chatWithAi.canEnterMessage,
-  };
-};
-const mapDispatch = {
-  postMessage: openAiDispatch,
-  getInputHeight: inputHeight,
-};
+// const mapState = state => {
+//   return {
+//     canEnterMessage: state.chatWithAi.canEnterMessage,
+//   };
+// };
+// const mapDispatch = {
+//   postMessage: openAiDispatch,
+//   inputHeight,
+// };
 
-export default connect(mapState, mapDispatch)(FieldInput);
+export default FieldInput;
 
 {
   /* <p>

@@ -3,15 +3,9 @@ import { Provider } from 'react-redux';
 import store, { persistor } from '../redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import './App.scss';
-import Chat from './Chat/Chat';
-// Bootstrap CSS
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import Header from '../Components/Header/Header';
-import Footer from '../Components/Footer/Footer';
+import Chat from '../views/Chat';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
 const App = () => {
   return (

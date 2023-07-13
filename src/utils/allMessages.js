@@ -71,14 +71,8 @@ const arrIteration = arr => {
 };
 
 export const arrPostGetMessage = state => {
-  if (
-    !state ||
-    !state.chatWithAi ||
-    !state.chatWithAi.questions ||
-    state.chatWithAi.questions < 1 ||
-    state.chatWithAi.dateQuestions < 1
-  )
-    return null;
+  if (state.chatWithAi.questions < 1 || state.chatWithAi.dateQuestions < 1)
+    return [];
 
   const arrQuestions = state.chatWithAi.questions;
   const arrReplies = state.chatWithAi.replies;

@@ -1,21 +1,21 @@
 import React from 'react';
 import './SampleQuestions.scss';
-import { inputHeight } from '../../redux/actions/heightComponents.actions';
-import { connect } from 'react-redux';
-import { openAiDispatch } from '../../redux/middleware/postChatThunk';
-import { stateAccordion } from '../../redux/actions/chatWithOpenAi.actions';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+import { stateAccordion } from '../../redux/slices/chatWithAiSlice';
+import { openAiDispatch } from '../../redux/actions/chatActions';
 
-const SampleQuestions = ({
-  canEnterMessage,
-  postMessage,
-  setStateAccordion,
-}) => {
+export default function SampleQuestions() {
+  const canEnterMessage = useAppSelector(
+    state => state.chatWithAi.canEnterMessage
+  );
+  const dispatch = useAppDispatch();
+
   const handleClick = e => {
     e.preventDefault();
     if (!canEnterMessage) return;
-    setStateAccordion(false);
+    dispatch(stateAccordion(false));
     const message = e.target.textContent;
-    postMessage(message);
+    dispatch(openAiDispatch(message));
   };
 
   return (
@@ -33,17 +33,4 @@ const SampleQuestions = ({
       </ul>
     </div>
   );
-};
-
-const mapState = state => {
-  return {
-    canEnterMessage: state.chatWithAi.canEnterMessage,
-  };
-};
-const mapDispatch = {
-  getInputHeight: inputHeight,
-  postMessage: openAiDispatch,
-  setStateAccordion: stateAccordion,
-};
-
-export default connect(mapState, mapDispatch)(SampleQuestions);
+}
