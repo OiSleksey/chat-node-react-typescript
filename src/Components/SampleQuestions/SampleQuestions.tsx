@@ -1,21 +1,26 @@
-import React from 'react';
-import './SampleQuestions.scss';
+import React, { MouseEvent } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { stateAccordion } from '../../store/slices/chatWithAiSlice';
 import { openAiDispatch } from '../../store/actions/chatActions';
+import './SampleQuestions.scss';
 
-export default function SampleQuestions() {
+export default function SampleQuestions(): JSX.Element {
   const canEnterMessage = useAppSelector(
     state => state.chatWithAi.canEnterMessage
   );
+
   const dispatch = useAppDispatch();
 
-  const handleClick = e => {
+  // const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+  const handleClick = (e: MouseEvent<HTMLLIElement>) => {
     e.preventDefault();
     if (!canEnterMessage) return;
     dispatch(stateAccordion(false));
-    const message = e.target.textContent;
-    dispatch(openAiDispatch(message));
+    const target = e.target as HTMLLIElement;
+    const message = target.textContent;
+    if (message !== null) {
+      dispatch(openAiDispatch(message));
+    }
   };
 
   return (

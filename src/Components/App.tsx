@@ -7,7 +7,7 @@ import Chat from '../views/Chat';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 
-export default function App() {
+export default function App(): JSX.Element {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>

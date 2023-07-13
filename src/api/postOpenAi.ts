@@ -1,14 +1,16 @@
 import axios from 'axios';
 
 // // With server
+// const url: string | undefined = process.env.REACT_APP_BASE_URL;
 
-// const url = 'http://localhost:4001/';
+// interface ResponseServer {
+//   message: string;
+// }
 
-// export const postRequest = async message => {
+// export const postRequest = async (message: string): Promise<string> => {
 //   try {
-//     console.log(message);
-//     const response = await axios.post(
-//       url,
+//     const response = await axios.post<ResponseServer>(
+//       url!,
 //       { message },
 //       {
 //         headers: {
@@ -16,7 +18,6 @@ import axios from 'axios';
 //         },
 //       }
 //     );
-//     console.log(response.data.message);
 //     return response.data.message;
 //   } catch (error) {
 //     console.error(error);
@@ -25,8 +26,7 @@ import axios from 'axios';
 // };
 
 //Without server
-
-export const postRequest = message => {
+export const postRequest = (message: string): Promise<string> => {
   return new Promise(function (res, rej) {
     setTimeout(
       () =>
