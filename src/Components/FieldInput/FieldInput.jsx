@@ -7,8 +7,8 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 // import { heightComponentsSlice } from '../../redux/slices/heightComponentsSlice';
 import { useAppDispatch } from '../../hooks/redux';
-import { inputHeight } from '../../redux/slices/heightComponentsSlice';
-import { openAiDispatch } from '../../redux/actions/chatActions';
+import { inputHeight } from '../../store/slices/heightComponentsSlice';
+import { openAiDispatch } from '../../store/actions/chatActions';
 import { useAppSelector } from '../../hooks/redux';
 
 const FieldInput = (

@@ -4,7 +4,7 @@ import FieldInput from '../components/FieldInput/FieldInput';
 import FieldСorrespondence from '../components/FieldСorrespondence/FieldСorrespondence';
 import CustomizedAccordions from '../components/Accordion/Accordion';
 import { useAppDispatch } from '../hooks/redux';
-import { chatHeight } from '../redux/slices/heightComponentsSlice';
+import { chatHeight } from '../store/slices/heightComponentsSlice';
 
 export default function Chat() {
   //

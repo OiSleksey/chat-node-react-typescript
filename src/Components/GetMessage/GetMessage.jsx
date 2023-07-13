@@ -1,7 +1,7 @@
 import React from 'react';
 import './GetMessage.scss';
 import Loading from '../Loading/Loading';
-import avatarAi from '../../images/avatar-ai.png';
+import avatarAi from '../../assets/images/avatar-ai.png';
 
 const GetMessage = ({ reply, time }) => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import './PostMessage.scss';
-import avatarUser from '../../images/avatar-user.png';
+import avatarUser from '../../assets/images/avatar-user.png';
 
 const PostMessage = ({ question, time }) => {
   return (

@@ -7,8 +7,8 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import './Accordion.scss';
 import SampleQuestions from '../SampleQuestions/SampleQuestions';
-import { stateAccordion } from '../../redux/slices/chatWithAiSlice';
-import { accordionHeight } from '../../redux/slices/heightComponentsSlice';
+import { stateAccordion } from '../../store/slices/chatWithAiSlice';
+import { accordionHeight } from '../../store/slices/heightComponentsSlice';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 
 const Accordion = styled(props => (

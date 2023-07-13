@@ -1,8 +1,8 @@
 import React from 'react';
 import './SampleQuestions.scss';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { stateAccordion } from '../../redux/slices/chatWithAiSlice';
-import { openAiDispatch } from '../../redux/actions/chatActions';
+import { stateAccordion } from '../../store/slices/chatWithAiSlice';
+import { openAiDispatch } from '../../store/actions/chatActions';
 
 export default function SampleQuestions() {
   const canEnterMessage = useAppSelector(
