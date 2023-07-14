@@ -2,7 +2,12 @@ import React from 'react';
 import './PostMessage.scss';
 import avatarUser from '../../assets/images/avatar-user.png';
 
-const PostMessage = ({ question, time }) => {
+interface PostMessageProps {
+  question: string;
+  time: string;
+}
+
+export default function PostMessage({ question, time }: PostMessageProps) {
   return (
     <div className="d-flex justify-content-end mb-5 msg-post">
       <div className="msg-post__content">
@@ -14,10 +19,4 @@ const PostMessage = ({ question, time }) => {
       </div>
     </div>
   );
-};
-
-export default PostMessage;
-
-// 18:55, Today;
-// 18:55, Yesterday;
-// 18:55, 03.05.2022;
+}

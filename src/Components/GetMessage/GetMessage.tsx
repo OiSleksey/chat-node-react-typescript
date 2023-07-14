@@ -3,7 +3,15 @@ import './GetMessage.scss';
 import Loading from '../Loading/Loading';
 import avatarAi from '../../assets/images/avatar-ai.png';
 
-const GetMessage = ({ reply, time }) => {
+interface GetMessageProps {
+  reply: string;
+  time: string;
+}
+
+export default function GetMessage({
+  reply,
+  time,
+}: GetMessageProps): JSX.Element {
   return (
     <div className="d-flex justify-content-start mb-5 msg-get">
       <div className="user__img-cont">
@@ -16,6 +24,4 @@ const GetMessage = ({ reply, time }) => {
       </div>
     </div>
   );
-};
-
-export default GetMessage;
+}

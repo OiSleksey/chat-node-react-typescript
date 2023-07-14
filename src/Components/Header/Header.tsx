@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.scss';
 
-const Header = () => {
+export default function Header(): JSX.Element {
   return (
     <header>
       <div className="header-cont">
@@ -9,6 +9,4 @@ const Header = () => {
       </div>
     </header>
   );
-};
-
-export default Header;
+}

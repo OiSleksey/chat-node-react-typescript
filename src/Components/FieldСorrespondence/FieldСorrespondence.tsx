@@ -6,7 +6,7 @@ import PostMessage from '../PostMessage/PostMessage';
 import GetMessage from '../GetMessage/GetMessage';
 import { useAppSelector } from '../../hooks/redux';
 
-export default function FieldСorrespondence() {
+export default function FieldСorrespondence(): JSX.Element {
   const allMesseges = useAppSelector(state => arrPostGetMessage(state));
   const correspodenceHeight = useAppSelector(state => {
     const accordion = state.heightComponents.accordion;
@@ -17,9 +17,9 @@ export default function FieldСorrespondence() {
     return correspodence;
   });
 
-  const myRef = React.useRef();
+  const myRef = React.useRef<HTMLDivElement>();
 
-  const scrollToBottom = () => {
+  const scrollToBottom = (): void => {
     scroll.scrollToBottom({
       duration: 500,
       delay: 100,
@@ -61,7 +61,7 @@ export default function FieldСorrespondence() {
         className="field-coresspodence__body msg-cotainer"
         style={styleBody}
         id="scroll-container"
-        ref={myRef}
+        ref={myRef as React.RefObject<HTMLDivElement>}
       >
         {items}
       </div>
