@@ -1,10 +1,10 @@
 import React from 'react';
 import { animateScroll as scroll } from 'react-scroll';
-import './FieldСorrespondence.scss';
-import { arrPostGetMessage } from '../../utils/allMessages';
 import PostMessage from '../PostMessage/PostMessage';
 import GetMessage from '../GetMessage/GetMessage';
+import { arrPostGetMessage } from '../../utils/allMessages';
 import { useAppSelector } from '../../hooks/redux';
+import './FieldСorrespondence.scss';
 
 export default function FieldСorrespondence(): JSX.Element {
   const allMesseges = useAppSelector(state => arrPostGetMessage(state));

@@ -1,9 +1,9 @@
 import React from 'react';
-import './FieldInput.scss';
 import { useAppDispatch } from '../../hooks/redux';
 import { inputHeight } from '../../store/slices/heightComponentsSlice';
 import { openAiDispatch } from '../../store/actions/chatActions';
 import { useAppSelector } from '../../hooks/redux';
+import './FieldInput.scss';
 
 export default function FieldInput(): JSX.Element {
   const canEnterMessage = useAppSelector(

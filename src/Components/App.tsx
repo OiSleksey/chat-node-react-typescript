@@ -1,11 +1,11 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import store, { persistor } from '../store';
 import { PersistGate } from 'redux-persist/integration/react';
-import './App.scss';
+import store, { persistor } from '../store';
 import Chat from '../views/Chat';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
+import './App.scss';
 
 export default function App(): JSX.Element {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import './PostMessage.scss';
 import avatarUser from '../../assets/images/avatar-user.png';
+import './PostMessage.scss';
 
 interface PostMessageProps {
   question: string;
