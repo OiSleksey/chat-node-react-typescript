@@ -1,9 +1,9 @@
 import React from 'react';
-import FieldInput from '../components/FieldInput/FieldInput';
-import FieldСorrespondence from '../components/FieldСorrespondence/FieldСorrespondence';
-import CustomizedAccordions from '../components/Accordion/Accordion';
-import { useAppDispatch } from '../hooks/redux';
-import { chatHeight } from '../store/slices/heightComponentsSlice';
+import FieldInput from '../FieldInput/FieldInput';
+import FieldСorrespondence from '../FieldСorrespondence/FieldСorrespondence';
+import CustomizedAccordions from '../Accordion/Accordion';
+import { useAppDispatch } from '../../hooks/redux';
+import { chatHeight } from '../../store/slices/heightComponentsSlice';
 import './Chat.scss';
 
 export default function Chat() {
@@ -16,6 +16,7 @@ export default function Chat() {
       dispatch(chatHeight(clientHeight));
     }
   };
+
   React.useEffect(() => {
     const resizeObserver = new ResizeObserver(changeHeight);
     if (myRef.current) {
@@ -25,7 +26,9 @@ export default function Chat() {
     return () => {
       resizeObserver.disconnect();
     };
+    // eslint-disable-next-line
   }, []);
+
   return (
     <section className="chat" ref={myRef}>
       <div className="chat__accordion">

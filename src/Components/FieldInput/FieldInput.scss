@@ -1,6 +1,6 @@
 @import '../../assets/styles/variables/mixins.sass';
 @import '../../assets/styles/variables/colors.sass';
-@import '../../assets/styles/media-queires/media.sass';
+@import '../../assets/styles/queries/queries.sass';
 
 .form-control:focus {
   color: var(--bs-body-color);

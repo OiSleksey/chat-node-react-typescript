@@ -1,7 +1,7 @@
-@import '../assets/styles/media-queires/media';
-@import '../assets/styles/variables/mixins';
-@import '../assets/styles/variables/colors';
-@import '../assets/styles/media-queires/media';
+@import '../../assets/styles/queries/queries';
+@import '../../assets/styles/variables/mixins';
+@import '../../assets/styles/variables/colors';
+@import '../../assets/styles/queries/queries';
 
 .chat {
   padding: 0;
@@ -18,7 +18,7 @@
   height: 74vh;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   &__accordion {
     width: 100%;
     padding: 8px;

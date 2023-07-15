@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import store, { persistor } from '../store';
-import Chat from '../views/Chat';
+import Chat from '../components/Chat/Chat';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import './App.scss';

@@ -1,37 +1,7 @@
-@import '../assets/styles/media-queires/media';
+@import '../assets/styles/queries/queries';
 @import '../assets/styles/variables/colors';
 @import '../assets/styles/variables/mixins';
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-* {
-  box-sizing: border-box;
-  // user-select: none
-}
-
-html {
-  font-size: 62.5%;
-  @include respond(tab-port-first) {
-    font-size: 50%;
-  }
-  @include respond(tab-port-second) {
-    font-size: 45%;
-  }
-  @include respond(tab-port-third) {
-    font-size: 35%;
-  }
-  @include respond(phone-first) {
-    font-size: 65%;
-  }
-  // @include respond(phone-second)
-  //     font-size: 30%
-}
-
-body {
-  min-height: 100%;
-  --bs-body-font-family: 'Roboto', sans-serif;
-  background-color: $background-body !important;
-  color: $color-body;
-}
 
 .container {
   @include flex-Vcenter-Hcenter;
@@ -40,7 +10,8 @@ body {
     min-height: 100vh;
     // max-width: 79.4rem;
     // min-width: 85.4rem;
-    width: clamp(85.4rem, 75%, 20rem);
+    // width: clamp(85.4rem, 75%, 20rem);
+    width: clamp(120rem, 75%, 20rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
